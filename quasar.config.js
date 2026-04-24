@@ -3,7 +3,7 @@
 
 import { defineConfig } from '#q-app/wrappers'
 
-export default defineConfig((/* ctx */) => {
+export default defineConfig((ctx) => {
   return {
     // https://v2.quasar.dev/quasar-cli-vite/prefetch-feature
     // preFetch: true,
@@ -37,7 +37,8 @@ export default defineConfig((/* ctx */) => {
         node: 'node22',
       },
 
-      vueRouterMode: 'history', // available values: 'hash', 'history'
+      vueRouterMode: 'hash', // GitHub Pages refresh/route uyumu icin
+      publicPath: ctx.prod ? '/waveatlas/' : '/',
       // vueRouterBase,
       // vueDevtools,
       // vueOptionsAPI: false,
